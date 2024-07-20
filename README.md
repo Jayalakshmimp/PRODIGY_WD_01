@@ -1,0 +1,2 @@
+an interactive navigation menu that changes colour or style when scrolled or hovered over. This fixed-position menu is designed to be visible on all pages, ensuring a seamless user experience.
+Using HTML, CSS, and JavaScript, I structured, styled, and added interactivity to the menu, enhancing its functionality and aesthetics. I developed a comprehensive website on Meghalaya, featuring a home page, heritage section, hotel booking page, and a gallery.
