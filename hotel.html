@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hotel Booking </title>
+<style>
+ body {
+   background-image: url('https://cms.brightsun.co.uk/uploads/20-12-2021-11-26Best-Travel-Tips-for-Visiting-Meghalaya.jpg');
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   font-family: Arial, sans-serif;
+   color: white;
+}
+
+.container {
+   width: 300px;
+   margin: 0 auto;
+   background: rgba(0, 0, 0, 0.7);
+   padding: 20px;
+   border-radius: 10px;
+   text-align: center;
+}
+
+h2 {
+   margin-bottom: 20px;
+}
+
+label, select, input {
+   display: block;
+   width: 100%;
+   margin-bottom: 10px;
+}
+
+select, input {
+   padding: 8px;
+   border: none;
+   border-radius: 5px;
+}
+
+button {
+   background-color: blue;
+   color: white;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+button:hover {
+   background-color: darkblue;
+}
+
+</style>
+</head>
+<header>
+<a href="home.html">
+</a>
+</header>
+<center>
+<hr>
+ <nav>
+   <table CELLSPACING="5" CELLPADDING="5">
+    <tr>
+    <td><a href="home.html">HOME</a></td>
+    <td><a href="culture.html">HERITAGE</a></td>
+    <td><a href="hotel.html">HOTEL BOOKING</a></td>
+    <td><a href="photos.html">GALLERY</a></td>
+   </tr>
+</table>
+
+<body>
+
+<div class="container">
+<h2>Hotel Booking System</h2>
+<form id="bookingForm">
+   <label for="hotel">Choose Hotel:</label>
+   <select id="hotel" name="hotel" required>
+      <option value="">Select Hotel</option>
+      <option value="Hotel Pinewood">Hotel Pinewood</option>
+      <option value="Hotel Polo Towers">Hotel Polo Towers</option>
+      <option value="Ri Kynjai">Ri Kynjai</option>
+      <option value="The Loft">The Loft</option>
+   </select>
+
+   <label for="checkin">Check-in Date:</label>
+   <input type="date" id="checkin" name="checkin" required>
+
+   <label for="checkout">Check-out Date:</label>
+   <input type="date" id="checkout" name="checkout" required>
+
+   <label for="guests">Number of Guests:</label>
+   <input type="number" id="guests" name="guests" min="1" required>
+
+   <button type="button" onclick="bookHotel()">Book</button>
+</form>
+</div>
+
+<script>
+function bookHotel() {
+   const hotel = document.getElementById('hotel').value;
+   const checkin = document.getElementById('checkin').value;
+   const checkout = document.getElementById('checkout').value;
+   const guests = document.getElementById('guests').value;
+
+   if (hotel && checkin && checkout && guests) {
+       alert(`Hotel: ${hotel}\nCheck-in: ${checkin}\nCheck-out: ${checkout}\nGuests: ${guests}\n\nBooking Successful!`);
+   } else {
+       alert('Please fill out all fields.');
+   }
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('nav a');
+    
+    links.forEach(link => {
+        link.addEventListener('mouseover', function() {
+            this.style.color = 'white';
+            this.style.backgroundColor = 'black';
+        });
+
+        link.addEventListener('mouseout', function() {
+            this.style.color = 'black';
+            this.style.backgroundColor = 'transparent';
+        });
+    });
+});
+</script>
+
+
+</body>
+</html>
